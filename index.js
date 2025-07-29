@@ -3,7 +3,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the BFHL API! Use POST /bfhl to send data.');
+  res.send('Welcome to the our app!');
 });
 
 const PORT = process.env.PORT || 3000;
