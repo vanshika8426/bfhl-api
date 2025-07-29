@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the BFHL API! Use POST /bfhl to send data.');
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.post('/bfhl', (req, res) => {
@@ -61,3 +65,4 @@ app.post('/bfhl', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
